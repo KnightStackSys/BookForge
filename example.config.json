@@ -1,0 +1,62 @@
+{
+  "engine": {
+    "path": "xxxxxxxxxxxxxx",
+    "cwd": null,
+    "timeout_sec": 120,
+    "options": {
+      "Threads": 1,
+      "Hash": 2056
+    }
+  },
+  "analysis": {
+    "multipv": 12,
+    "depth": 30
+  },
+  "book": {
+    "output": "modern.nbook",
+    "root": {
+      "type": "startpos"
+    },
+    "score_perspective": "side_to_move_team",
+    "cp_per_pawn": 100,
+    "min_eval_pawns": -1.0,
+    "max_eval_pawns": 1.0,
+    "max_book_depth": 4,
+    "max_children_per_position": 10,
+    "include_forced_mates": true,
+    "include_losing_mates": false,
+    "reject_bound_scores": true,
+    "max_positions": 250000,
+    "commit_every": 500,
+    "vacuum_when_done": true
+  },
+  "balanced_positions": {
+    "enabled": false,
+    "output": "balanced_openings.txt.gz",
+    "min_eval_pawns": -1.0,
+    "max_eval_pawns": 1.0,
+    "min_ply": 8,
+    "max_ply": 24,
+    "exclude_forced_mates": true,
+    "reject_bound_scores": true,
+    "deduplicate": true,
+    "compresslevel": 9,
+    "flush_every": 100,
+    "fen_command": "getfen",
+    "fen_prefix": "fen ",
+    "fen_timeout_sec": 5.0,
+    "overwrite_with_book": false
+  },
+  "debug": {
+    "position_saves": true,
+    "show_history": true,
+    "show_analyzed_moves": true
+  },
+  "parallel": {
+    "enabled": true,
+    "workers": 20
+  },
+  "commands": {
+    "on": "yes"
+  }
+}
